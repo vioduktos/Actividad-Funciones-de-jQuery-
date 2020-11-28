@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="funJQ" content="primera actividad JQ">
+        <title>JQUERY</title>
+        <link rel="stylesheet" type="text/css" href="jquery1.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+            $("#click").click(function(){// crea alerta que diga click
+                alert("click")
+            });
+            $('#hide').click(function(){//oculta el div
+               $("#hide").hide()
+            });
+            $('#show').click(function(){
+               $("#hide").show()
+            });
+            $("#toggle").click(function(){
+               $("#toggle p").toggle()
+            });
+            $("#sube").click(function(){
+               $("#sube h1").slideUp()
+            });
+            $("#baja").click(function(){
+               $("#sube h1").slideDown()
+            });
+            $("#slideToggle").click(function(){
+               $("#slideToggle h1").slideToggle()
+            });
+            $("#fadein").click(function(){
+               $("#hide").fadeIn();
+               $("#slideToggle h1").fadeIn("lento");
+            });
+            $("#fadeout button").click(function(){
+               $("#hide").fadeOut();
+               $("#click").fadeOut();
+               $("#show").fadeOut();
+            });
+            $("#clase").click(function(){
+               $(".bloque1").addClass("bloque4");
+            });
+            $("#before").click(function(){
+               $("#before h1").before(" funciona");
+            });
+            $("#after").click(function(){
+               $("#after p").after("vioduktos rapers");
+            });
+            $("#append").click(function(){
+               $("ul").append("carrete el sabado");
+            });
+            $("#html").click(function(){
+               $("#html h1").append("<br>Explicando Funciones");
+            });
+            $("#valores").click(function(){
+                $("li").attr("type","square");
+            });
+            $("#val").click(function(){
+               $("input:text").val ("vioduktos");
+            });
+            $("#text").click(function(){
+               $("button").text ("Presionar");
+           } );
+        } );
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <h1> FUNCIONES </h1>
+            <div id="click" class="bloque1">
+                <h1>.CLICK</h1>
+                <p>El evento de clic ocurre cuando se hace clic en un elemento.
+                    <br><span>en este ejemplo al presionar el botón, tiene que decir  "apretaste click"</span>
+                </p>
+                <button>.click</button>
+            </div>
+            <div id="hide" class="bloque1">
+                <h1>.HIDE</h1>
+                <p>El método hide () oculta los elementos seleccionados.
+                    <br><span>en este ejemplo al presionar el boton, ocultará el div </span>
+                </p>
+                <button>.hide</button>
+            </div>
+            <div id="show" class="bloque1">
+                <h1>.SHOW</h1>
+                <p>El método show () muestra los elementos seleccionados ocultos.
+                    <br><span>en este ejemplo al presionar el botón, se mostrará el div oculto</span>
+                </p>
+                <button>.show</button>
+            </div>
+            <div id="toggle" class="bloque1">
+                <h1>.TOGGLE</h1>
+                <p>El método toggle () alterna entre hide () y show () para los elementos seleccionados.
+                    <br><span>en este ejemplo al presionar el botón se alternará con el párrafo </span> 
+                </p>
+                <button>.toggle</button>
+            </div>
+            <div id="sube" class="bloque1" >
+                <h1>.SLIDEUP</h1>
+                <p>El método slideUp () desliza hacia arriba (oculta) los elementos seleccionados.
+                    <br><span>en este ejemplo al presionar el botón se ocultará el título</span> 
+                </p>
+                <button>.slideUp</button>
+            </div>
+            <div id="baja" class="bloque2">
+                <h1>.SLIDEDOWN</h1>
+                <p>El método desliza hacia abajo (muestra) los elementos seleccionados.
+                    <br><span>en este ejemplo al presionar el botón se mostrará el título de SlideUP</span> 
+                </p>
+                <button>.slideDown</button>
+            </div>
+            <div id="slideToggle" class="bloque2">
+                <h1>SLIDETOGGLE</h1>
+                <p>El método alterna entre slideUp () y slideDown () para los elementos seleccionados.
+                    <br><span>en este ejemplo al presionar el botón, se alternará el título</span> 
+                </p>
+                <button>.slideToggle</button>
+            </div>
+            <div id="fadein" class="bloque2">
+                <h1>.FADEIN</h1>
+                <p>El método jQuery se utiliza para fundir(mostrar) un elemento oculto.
+                    <br><span>antes de presionar el botón oculta hide y título de slideToggle </span> 
+                </p>
+                <button>.fadein</button>
+            </div>
+            <div id="fadeout" class="bloque2">
+                <h1>.FADEOUT</h1>
+                <p>Se usa para desvanecer un elemento visible.</p>
+                     <br><span>en este ejemplo al presionar el botón se desvanecerá el div click, show y hide </span> 
+                <button>.fadeout</button>
+            </div>
+            <div id="clase" class="bloque2">
+                <h1>.ADDCLASS</h1>
+                <p>El método addClass () agrega uno o más nombres de clase a los elementos seleccionados.
+                    <br><span>en este ejemplo al presionar el botón las cajas verdes tomaran la clase de las amarillas</span> 
+                </p>
+                <button>.addClass</button>
+            </div>
+            <div id="before" class="bloque3">
+                <h1>.BEFORE</h1>
+                <p>El método before () inserta el contenido especificado delante (antes) de los elementos seleccionados.
+                    <br><span>en este ejemplo al presionar el botón se insertará antes del título " funciona"</span> 
+                </p>
+                <button>.before</button>
+            </div>
+            <div id="after" class="bloque3">
+                <h1>.AFTER</h1>
+                <p>El método after () inserta el contenido especificado después de los elementos seleccionados.
+                    <br><span>en este ejemplo al presionar el botón se insertará después del parrafo "vioduktos rapers"</span>
+                </p>
+                <button>.after</button>
+            </div>
+            <div id="append" class="bloque3">
+                <h1>.APPEND</h1>
+                <p>El append()método agrega un elemento al final de la lista.</p>
+                <ul>
+                    <li>vioduktos</li>
+                    <li>sabado</li>
+                </ul>
+                    <br><span>en este ejemplo al presionar el botón se añadirá a la lista "carrete el sabado"</span>
+                <button>.append</button>
+            </div>
+            <div id="html" class="bloque3">
+                <h1>.HTML</h1>
+                <p>El método html () establece o devuelve el contenido (innerHTML) de los elementos seleccionados.
+                    <br><span>en este ejemplo al presionar el botón se agregará otro título</span>
+                </p>
+                <button>.html</button>
+            </div>
+            <div id="valores" class="bloque4">
+                <h1>.ATTR</h1>
+                <p>El método attr () establece o devuelve atributos y valores de los elementos seleccionados.
+                    <br><span>en este ejemplo al presionar el botón las vieñetas de la lista del div append se transforman a cuadrado</span>
+                </p>
+                <button>.attr</button>
+            </div>
+            <div id="val" class="bloque4">
+                <h1>.VAL</h1>
+                <p>El método val () devuelve o establece el atributo de valor de los elementos seleccionados.Se usa principalmente con elementos de formulario.</p>
+                    <p>Nombre:<input type="text" name="estudiante"></p>
+                    <br><span>en este ejemplo al presionar el botón se establecerá un nombre</span>
+                <button>.val</button>
+            </div>
+            <div id="text" class="bloque4">
+                <h1>.TEXT</h1>
+                <p>El método text () establece o devuelve el contenido de texto de los elementos seleccionados.
+                    <br><span>en este ejemplo al presionar el botón todos los textos de los botones dirán "presionar"</span>
+                </p>
+                <button>.text</button>
+            </div>
+            </body>
+</html>
